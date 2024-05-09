@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body, h1, h2, button, textarea, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    padding: 20px 30px; /* Increased padding for larger buttons */
+    background-color: #00704a; /* Starbucks green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #005c3b; /* Darker on hover */
+}
+
+/* Main Container and Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.category-container, .basket {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.category-container {
+    flex: 3 0 75%; /* Larger part for menu */
+    margin-right: 20px; /* Space between sections */
+}
+
+.basket {
+    flex: 1 0 25%; /* Smaller part for basket */
+}
+
+/* Menu Items Grid */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px; /* Spacing between items */
+}
+
+.button, .add-to-basket, .pay-button {
+    padding: 30px 40px; /* Increased padding for larger buttons */
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #00704a; /* Starbucks green */
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+.button:hover, .add-to-basket:hover, .checkout:hover, .pay-button:hover {
+    background-color: #005c3b; /* Darker on hover */
+}
+
+/* Specific Button Colors */
+.coffee { background-color: #6b3e26; }
+.tea { background-color: #1a936f; }
+.cakes { background-color: #c94c4c; }
+.cold-drinks { background-color: #4056a1; }
+.milkshakes { background-color: #f4d35e; }
+.snacks { background-color: #ee964b; }
+
+/* Comment Box */
+.comment-box {
+    width: 75%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .category-container, .basket {
+        width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .button, .add-to-basket, .checkout, .pay-button {
+        width: 100%; /* Full width for better handling */
+    }
+}
+
+.items div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Spacing between basket items */
+}
+
+.items button {
+    margin: 0 5px; /* Spacing around buttons */
+}

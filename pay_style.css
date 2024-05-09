@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap");
+
+body {
+  background: #b0afb1; /* Vibrant purple background for the whole page */
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #fff; /* Ensure text visibility */
+  background: linear-gradient(to right, #4ff673, #176b0c, #005c3b);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none; /* Remove focus outline for cleaner design */
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center the card form on the page */
+  align-items: center; /* Center vertically */
+  padding: 20px;
+}
+
+.card-form {
+  width: 100%;
+  max-width: 570px;
+  background: #E3F2FD; /* Light blue form background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 10px;
+  padding: 35px;
+  color: #333; /* Dark text for readability */
+}
+
+.card-form__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card-form__col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.card-form__col:last-child {
+  margin-right: 0;
+}
+
+.card-form__col.-cvv {
+  max-width: 120px; /* Specific width for CVV input */
+}
+
+.card-form__group {
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+}
+
+.card-form__button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #00704a; /* Starbucks green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-form__button:hover {
+  background-color: #005c3b; /* Darker green on hover */
+}
+
+.card-input__input,
+.card-input__input.-select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid #BBDEFB; /* Lighter blue border for inputs */
+  background-color: #FAFAFA; /* Very light grey background */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-input__input:hover,
+.card-input__input:focus {
+  border-color: #1E88E5; /* Highlight color on focus/hover */
+  box-shadow: 0 2px 4px -1px rgba(30, 136, 229, 0.2); /* Subtle shadow for depth */
+}
+
+.card-input__label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-form__col {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .card-form__row {
+    flex-direction: column;
+  }
+
+  .card-form__inner {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .card-item {
+    width: 90%; /* Adjust for smaller screens */
+    height: auto;
+  }
+
+  .card-form__button {
+    font-size: 16px;
+  }
+}

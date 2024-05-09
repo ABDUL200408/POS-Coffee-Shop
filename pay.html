@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta tag -->
+  <title>Credit/Debit Card Payment</title>
+  <link rel="stylesheet" href="./pay_style.css">
+</head>
+<body>
+<div class="wrapper">
+  <form class="card-form" action="submit_payment.php" method="post"> <!-- Assuming server-side script to handle the payment -->
+    <div class="card-form__inner">
+      <div class="card-input">
+        <label for="cardNumber" class="card-input__label">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" class="card-input__input" autocomplete="cc-number" required pattern="[0-9]{13,16}"> <!-- Validating card number input -->
+      </div>
+      <div class="card-input">
+        <label for="cardName" class="card-input__label">Cardholder's Name</label>
+        <input type="text" id="cardName" name="cardName" class="card-input__input" autocomplete="cc-name" required> <!-- Ensuring full name is required -->
+      </div>
+      <div class="card-form__row">
+        <div class="card-form__col">
+          <label for="cardMonth" class="card-input__label">Expiration Date</label>
+          <select class="card-input__input -select" id="cardMonth" name="cardMonth" required>
+            <option value="" disabled selected>Month</option>
+            <!-- Month options added by JavaScript -->
+          </select>
+          <select class="card-input__input -select" id="cardYear" name="cardYear" required>
+            <option value="" disabled selected>Year</option>
+            <!-- Year options added by JavaScript -->
+          </select>
+        </div>
+        <div class="card-form__col -cvv">
+          <label for="cardCvv" class="card-input__label">CVV</label>
+          <input type="text" id="cardCvv" name="cardCvv" class="card-input__input" maxlength="4" autocomplete="cc-csc" required> <!-- Adding autocomplete attribute for CVV -->
+        </div>
+      </div>
+      <button type="submit" class="card-form__button">Pay Now</button> <!-- Changing the button text to 'Pay Now' -->
+    </div>
+  </form>
+</div>
+<script src="./pay.js"></script>
+</body>
+</html>

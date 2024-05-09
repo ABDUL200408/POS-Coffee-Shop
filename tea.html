@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to StarCup Coffee Shop - Tea</title>
+    <link rel="stylesheet" href="main_styles.css"> <!-- Ensure the correct CSS file is linked -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Welcome to StarCup Coffee Shop</h1>
+            <div class="header-buttons">
+                <button class="header-button" onclick="history.back()">Back</button>
+                <button class="header-button" onclick="location.href='login.html'">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <section class="category-container">
+            <h2>Choose Your Tea</h2>
+            <div class="menu-items">
+                <button class="add-to-basket" data-name="Earl Grey">Earl Grey - £1.99</button>
+                <button class="add-to-basket" data-name="English Tea">English Tea - £1.99</button>
+                <button class="add-to-basket" data-name="Green Tea">Green Tea - £1.99</button>
+                <button class="add-to-basket" data-name="Chamomile">Chamomile - £1.99</button>
+                <button class="add-to-basket" data-name="Peppermint">Peppermint - £1.99</button>
+                <button class="add-to-basket" data-name="Jasmine Tea">Jasmine Tea - £1.99</button>
+                <button class="add-to-basket" data-name="Darjeeling">Darjeeling - £1.99</button>
+                <button class="add-to-basket" data-name="Rooibos">Rooibos - £1.99</button>
+                <button class="add-to-basket" data-name="Desi Chai">Desi Chai - £1.99</button>
+            </div>
+        </section>
+        <aside class="basket">
+            <h2>Your Basket</h2>
+            <div class="items"></div>
+            <div class="subtotal">
+                <span>Sub Total:</span>
+                <span id="total-price">£0.00</span>
+            </div>
+        </aside>
+    </div>
+    <div class="comment-box">
+        <textarea id="special-requests" placeholder="Add special requests..."></textarea>
+        <button onclick="addComment()">Add Comment</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 StarCup Coffee Shop. All rights reserved.</p>
+    </footer>
+    <script src="Scripts.js"></script>
+</body>
+</html>

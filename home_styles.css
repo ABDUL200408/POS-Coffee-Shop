@@ -1,0 +1,186 @@
+/* Reset and base styles */
+body, h1, h2, button, textarea, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.category-nav {
+    flex: 1 0 75%; /* Takes no less than 75% of the space */
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-right: 20px; /* Spacing between navigation and basket */
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+    gap: 10px; /* Spacing between buttons */
+}
+
+.button {
+    width: calc(50% - 10px); /* Two buttons per row with gap in between */
+    height: 120px; /* Increased button height for touch screen usability */
+    padding: 10px;
+    font-size: 20px; /* Increased font size for better visibility */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px; /* Increased border radius for better aesthetics */
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00704a; /* Starbucks green */
+}
+
+.coffee { background-color: #331100; } /* Dark brown */
+.tea { background-color: #2a4735; } /* Dark green */
+.cakes { background-color: #8c6d62; } /* Light brown */
+.cold-drinks { background-color: #00704a; } /* Starbucks green */
+.milkshakes { background-color: #f4d35e; } /* Yellow */
+.snacks { background-color: #8c6d62; } /* Light brown */
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.basket {
+    flex: 1 0 25%; /* Takes no less than 25% of the space */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.checkout {
+    padding: 10px 20px;
+    background-color: #005c3b; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.comment-box {
+    width: 75%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+footer {
+    background-color: #00704a; /* Starbucks green */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .category-nav, .basket {
+        flex: 1 0 100%; /* Both take full width on smaller screens */
+        margin-right: 0; /* Remove margin between them */
+    }
+
+    .button {
+        width: calc(50% - 10px); /* Two buttons per row with gap in between */
+        margin-bottom: 10px; /* Spacing between rows */
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        width: calc(100% - 10px); /* Single column layout for very small screens */
+    }
+
+    .comment-box {
+        width: 100%; /* Full width for better visibility on small devices */
+    }
+}
+
+/* New buttons */
+
+/* Header buttons styling */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.header-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #00704a; /* Starbucks green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.header-button:hover {
+    background-color: #005c3b;
+}
+
+/* Pay button in the basket */
+.pay-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #53162d; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensure it takes the full available width */
+}
+
+.pay-button:hover {
+    background-color: #555; /* Darker green on hover */
+}
+
+/* for spacing between the increase and decrease and price */
+
+.items div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Spacing between basket items */
+}
+
+.items button {
+    margin: 0 5px; /* Spacing around buttons */
+}
